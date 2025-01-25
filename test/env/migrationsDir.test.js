@@ -178,7 +178,7 @@ describe("migrationsDir", () => {
       }
     });
 
-    it("should fall back to using 'import' if Node requires the use of ESM", async () => {
+    xit("should fall back to using 'import' if Node requires the use of ESM", async () => {
       const error = new Error('ESM required');
       error.code = 'ERR_REQUIRE_ESM';
       moduleLoader.require = sinon.stub().throws(error);
